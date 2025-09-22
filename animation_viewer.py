@@ -49,16 +49,18 @@ def draw_knight_attack():
 
 
 def draw_knight_runattack():
-    for frame in range(6):
-        clear_canvas()
-        if frame < 4:
-            character.clip_draw(frame * 100 + start, 320, 110, 140, 400, 300)
-        if frame == 4:
-            character.clip_draw(frame * 100 + start + 10, 320, 110, 140, 400, 300)
-        if frame == 5:
-            character.clip_draw(frame * 100 + start + 20, 320, 110, 140, 400, 300)
-        update_canvas()
-        delay(0.15)
+    for i in range(5):
+        print("knight_runattack", i)
+        for frame in range(6):
+            clear_canvas()
+            if frame < 4:
+                character.clip_draw(frame * 100 + start, 320, 110, 140, 400, 300)
+            if frame == 4:
+                character.clip_draw(frame * 100 + start + 10, 320, 110, 140, 400, 300)
+            if frame == 5:
+                character.clip_draw(frame * 100 + start + 20, 320, 110, 140, 400, 300)
+            update_canvas()
+            delay(0.15)
     pass
 
 
