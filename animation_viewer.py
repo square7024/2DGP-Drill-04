@@ -5,12 +5,14 @@ open_canvas()
 character = load_image('knight_animation_sheet.png')
 
 frame = 0
+start = 400
 
 def draw_knight_walk():
-    clear_canvas()
-    character.clip_draw(0, 0, 100, 100, 400, 300)
-    update_canvas()
-    delay(0.1)
+    for frame in range(8):
+        clear_canvas()
+        character.clip_draw(frame*100 + start, 0, 200, 200, 400, 300)
+        update_canvas()
+        delay(0.1)
     pass
 
 
