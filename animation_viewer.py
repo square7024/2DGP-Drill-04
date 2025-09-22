@@ -24,6 +24,11 @@ def draw_knight_walk():
 
 
 def draw_knight_run():
+    for frame in range(7):
+        clear_canvas()
+        character.clip_draw(frame*100 + start, 480, 90, 100, 400, 300)
+        update_canvas()
+        delay(0.5)
     pass
 
 
@@ -44,7 +49,7 @@ def draw_knight(i):
     pass
 
 while True:
-    for i in range(3):
+    for i in range(1, 3):
         draw_knight(i)
         delay(1)
 
