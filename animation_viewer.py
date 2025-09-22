@@ -8,16 +8,18 @@ frame = 0
 start = 310
 
 def draw_knight_walk():
-    for frame in range(8):
-        clear_canvas()
-        if frame <= 4:
-            character.clip_draw(frame*100 + start, 610, 90, 100, 400, 300)
-        if frame > 4 and frame < 6:
-            character.clip_draw(frame * 100 + start - 10, 610, 90, 100, 400, 300)
-        if frame >= 6:
-            character.clip_draw(frame * 100 + start - 20, 610, 90, 100, 400, 300)
-        update_canvas()
-        delay(0.5)
+    for i in range(5):
+        print("knight_walk", i)
+        for frame in range(8):
+            clear_canvas()
+            if frame <= 4:
+                character.clip_draw(frame*100 + start, 610, 90, 100, 400, 300)
+            if frame > 4 and frame < 6:
+                character.clip_draw(frame * 100 + start - 10, 610, 90, 100, 400, 300)
+            if frame >= 6:
+                character.clip_draw(frame * 100 + start - 20, 610, 90, 100, 400, 300)
+            update_canvas()
+            delay(0.5)
     pass
 
 
