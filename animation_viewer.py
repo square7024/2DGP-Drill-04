@@ -49,6 +49,11 @@ def draw_knight_attack():
 
 
 def draw_knight_runattack():
+    for frame in range(6):
+        clear_canvas()
+        character.clip_draw(frame * 100 + start, 320, 110, 140, 400, 300)
+        update_canvas()
+        delay(0.35)
     pass
 
 
@@ -61,8 +66,8 @@ def draw_knight(i):
     pass
 
 while True:
-    for i in range(2, 3):
-        draw_knight(i)
+    # for i in range(3):
+        draw_knight(3)
         delay(1)
 
 close_canvas()
